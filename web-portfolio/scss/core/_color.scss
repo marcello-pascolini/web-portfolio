@@ -1,0 +1,14 @@
+  $background-light: #282828;
+  $background-dark: #181818;
+  $blue: #3f5efb;
+  $pink: #fc466b;
+  $gradient: linear-gradient(90deg, $blue 0%, $pink 100%);
+  
+  @mixin gradientText($size, $weight){
+    background: -webkit-linear-gradient(180deg, $blue 20%, $pink 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: $size;
+    font-weight: $weight;
+  }
