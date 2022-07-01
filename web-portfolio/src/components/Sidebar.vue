@@ -1,21 +1,45 @@
 <template>
     <section class="side-menu">
         <div class="side-img-box">
-            <div class="borders-box">
-
-            </div>
-            <img class='side-img' src="/public/images/linkedin.jpg" alt="myself">
+            <div class="borders-box"></div>
+            <img class='side-img' src="/images/profile.jpg" alt="myself">
         </div>
         <div class="side-nav-box">
             <ul class="side-nav-list">
-                <li class="side-nav-list-element list-active">Home</li>
-                <li class="side-nav-list-element">About</li>
-                <li class="side-nav-list-element">My skill</li>
-                <li class="side-nav-list-element">Contact me</li>
+                
+                <RouterLink  to="home" class='router-link'>
+                    <li class="router-list">Home</li>
+                </RouterLink>
+                 <RouterLink to="about" class="router-link">
+                    <li >about</li>
+                </RouterLink> 
+                <RouterLink to="skill" class="router-link">
+                    <li >my skill</li>
+                </RouterLink>
+                <RouterLink to="contact" class="router-link">
+                    <li >contact</li>
+                </RouterLink>
             </ul>
-
+        </div>
+        <div class="side-icon-box">
+              <div class="side-icon-img">
+                    <a href="https://www.linkedin.com/in/marcellopascolini" target="_blank">
+                        <img class='icon-img' src="/images/linkedin.png" alt="linkedin"/>
+                    </a>
+              </div>
+              <div class="side-icon-img">
+                    <a href="https://github.com/marcello-pascolini" target="_blank">
+                        <img class='icon-img' src="/images/github.png" alt="github"/>
+                    </a>
+              </div>
+              <div class="side-icon-img">
+                    <a download="MarcelloPascoliniCV.pdf" href="/images/">
+                        <img class='icon-img' src="/images/cv.png" alt="curriculum"/>
+                    </a>    
+              </div>
         </div>
         
     </section>
 </template>
+
 

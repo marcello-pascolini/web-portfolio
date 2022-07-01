@@ -1,29 +1,27 @@
 .side-menu{
-    padding: 1rem 0;
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 10;
     top: 0px;
     left: 0px;
     width: 20%;
     height: 100vh;
-    background-color: $background-dark;
+    background-image: $background-grey;
 }
-
 .side-img-box{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 .borders-box{
     border-left: 5px solid $blue;
-    border-right: 5px solid $pink;
+    border-right: 5px solid $orange;
     position: absolute;
-    animation: spin 2s linear infinite;
+    animation: spin 5s linear infinite;
     width: 210px;
     height: 210px;
     border-radius: 50%;
@@ -38,14 +36,19 @@
     display: flex;
     flex-direction: column;
 }
-.side-nav-list-element{
-    color: #909096;;
+.router-link{
+
+    display: block;
+    color: white;
     text-align: center;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid white;
     font-size: 18px;
     cursor: pointer;
+    text-transform: lowercase;
     &:hover{
-        @include gradientText(18px, 700);
+        @include gradientText(18px,700);
+        text-transform: capitalize;
+
     }
     &::before{
         content: "";
@@ -57,7 +60,7 @@
         display: block;
         height: 2px;
         background: $gradient;
-        transition: width 0.4s ease ;
+        transition: width 0.5s ease ;
         width: 0;
         margin-top: 1rem;
         margin-bottom: -1px;
@@ -65,5 +68,31 @@
     &:hover:after { 
         width: 100%; 
       }
+}
+.router-link-active{
+    text-transform: capitalize;
+    text-align: center;
+    border-bottom: none;
+    @include gradientText(18px, 700);
+    &::after{
+        content: "";
+        display: block;
+        height: 2px;
+        background: $gradient;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+.side-icon-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.side-icon-img{
+    cursor: pointer;
+
+    &:hover{
+        animation: bounce .7s linear infinite;
+    }
 }
 

@@ -1,0 +1,38 @@
+.home-wrapper{
+    position: absolute;
+    width: 80%;
+    margin-left: 20%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter{
+    font-size: 68px;
+    font-family: 'Monoton', cursive;
+    color: white;
+    transition: .4s;
+    &:hover:nth-child(odd){
+        @include gradientText(70px, 400);
+        font-size: 78px;
+    }
+    &:hover:nth-child(even){
+        @include gradientOrangeText(70px, 400);
+        font-size: 78px;
+    }
+}
+
+.home-text-box{
+    position: absolute;
+    z-index: 2; 
+    text-align: center;
+}
+.back-video{
+    height: 100%;
+    opacity: 0.8;
+}
