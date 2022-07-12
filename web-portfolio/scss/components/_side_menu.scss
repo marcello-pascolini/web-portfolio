@@ -9,7 +9,7 @@
     left: 0px;
     width: 20%;
     height: 100vh;
-    background-image: $background-grey;
+    background: $background;
 }
 .side-img-box{
     position: relative;
@@ -18,17 +18,17 @@
     justify-content: center; 
 }
 .borders-box{
-    border-left: 5px solid $blue;
-    border-right: 5px solid $orange;
+    border-left: 4px solid $green;
+    border-right: 4px solid $dark-green;
     position: absolute;
     animation: spin 5s linear infinite;
-    width: 210px;
-    height: 210px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 .side-img{
-    width: 210px;
-    height: 210px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 .side-nav-box{
@@ -37,18 +37,14 @@
     flex-direction: column;
 }
 .router-link{
-
     display: block;
-    color: white;
+    color: black;
     text-align: center;
-    border-bottom: 1px solid white;
-    font-size: 18px;
+    border-bottom: 1px solid rgb(105, 105, 105);
+    font-size: 20px;
     cursor: pointer;
-    text-transform: lowercase;
     &:hover{
-        @include gradientText(18px,700);
-        text-transform: capitalize;
-
+        @include gradientDarkText(20px,700);
     }
     &::before{
         content: "";
@@ -58,8 +54,8 @@
     &::after{
         content: "";
         display: block;
-        height: 2px;
-        background: $gradient;
+        height: 3px;
+         background: $gradient;
         transition: width 0.5s ease ;
         width: 0;
         margin-top: 1rem;
@@ -70,14 +66,13 @@
       }
 }
 .router-link-active{
-    text-transform: capitalize;
     text-align: center;
-    border-bottom: none;
-    @include gradientText(18px, 700);
+
+    @include gradientDarkText(20px, 700);
     &::after{
         content: "";
         display: block;
-        height: 2px;
+        height: 3px;
         background: $gradient;
         width: 100%;
         margin-top: 1rem;
@@ -90,9 +85,8 @@
 }
 .side-icon-img{
     cursor: pointer;
-
     &:hover{
-        animation: bounce .7s linear infinite;
+        animation: bounce .9s linear infinite;
     }
 }
 

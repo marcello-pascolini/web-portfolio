@@ -1,20 +1,21 @@
   $background-light: #282828;
   $background-dark: #9c9c9c;
-  $blue: #63a4ff;
-  $orange: #ff4e00;
-  $gradient: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
-  $background-grey: linear-gradient(360deg, #111111 0%, #1f1f1f 74%);
+  $green: #80ff72;
+  $dark-green: #0bab64;
+  $gradient: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+  $dark-green-gradient: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  $background: linear-gradient(315deg, #b0bdd1 0%, #efeff0 74%);
   
   @mixin gradientText($size, $weight){
-    background: -webkit-linear-gradient(180deg, #63a4ff 44%, #83eaf1 66%);
+    background: -webkit-linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: $size;
     font-weight: $weight;
   }
-  @mixin gradientOrangeText($size, $weight){
-    background: -webkit-linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  @mixin gradientDarkText($size, $weight){
+    background: -webkit-linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

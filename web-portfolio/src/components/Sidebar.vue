@@ -6,18 +6,17 @@
         </div>
         <div class="side-nav-box">
             <ul class="side-nav-list">
-                
-                <RouterLink  to="home" class='router-link'>
+                <RouterLink  to="/" class='router-link'>
                     <li class="router-list">Home</li>
                 </RouterLink>
                  <RouterLink to="about" class="router-link">
-                    <li >about</li>
+                    <li >About</li>
                 </RouterLink> 
                 <RouterLink to="skill" class="router-link">
-                    <li >my skill</li>
+                    <li >My skill</li>
                 </RouterLink>
                 <RouterLink to="contact" class="router-link">
-                    <li >contact</li>
+                    <li>Contact</li>
                 </RouterLink>
             </ul>
         </div>
@@ -33,12 +32,11 @@
                     </a>
               </div>
               <div class="side-icon-img">
-                    <a download="MarcelloPascoliniCV.pdf" href="/images/">
+                    <a download="MarcelloPascoliniCV.pdf" href="/documents/">
                         <img class='icon-img' src="/images/cv.png" alt="curriculum"/>
                     </a>    
               </div>
-        </div>
-        
+        </div> 
     </section>
 </template>
 

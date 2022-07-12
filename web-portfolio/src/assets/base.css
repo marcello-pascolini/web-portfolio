@@ -24,7 +24,7 @@ ol, ul {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
   overflow-x: hidden;
 }
 
@@ -96,7 +96,7 @@ a {
   left: 0px;
   width: 20%;
   height: 100vh;
-  background-image: linear-gradient(360deg, #111111 0%, #1f1f1f 74%);
+  background: linear-gradient(315deg, #b0bdd1 0%, #efeff0 74%);
 }
 
 .side-img-box {
@@ -107,18 +107,18 @@ a {
 }
 
 .borders-box {
-  border-left: 5px solid #63a4ff;
-  border-right: 5px solid #ff4e00;
+  border-left: 4px solid #80ff72;
+  border-right: 4px solid #0bab64;
   position: absolute;
   animation: spin 5s linear infinite;
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
 .side-img {
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
@@ -130,21 +130,19 @@ a {
 
 .router-link {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
-  border-bottom: 1px solid white;
-  font-size: 18px;
+  border-bottom: 1px solid rgb(105, 105, 105);
+  font-size: 20px;
   cursor: pointer;
-  text-transform: lowercase;
 }
 .router-link:hover {
-  background: -webkit-linear-gradient(180deg, #63a4ff 44%, #83eaf1 66%);
+  background: -webkit-linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  text-transform: capitalize;
 }
 .router-link::before {
   content: "";
@@ -154,8 +152,8 @@ a {
 .router-link::after {
   content: "";
   display: block;
-  height: 2px;
-  background: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  height: 3px;
+  background: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
   transition: width 0.5s ease;
   width: 0;
   margin-top: 1rem;
@@ -166,21 +164,19 @@ a {
 }
 
 .router-link-active {
-  text-transform: capitalize;
   text-align: center;
-  border-bottom: none;
-  background: -webkit-linear-gradient(180deg, #63a4ff 44%, #83eaf1 66%);
+  background: -webkit-linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
 }
 .router-link-active::after {
   content: "";
   display: block;
-  height: 2px;
-  background: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  height: 3px;
+  background: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
   width: 100%;
   margin-top: 1rem;
 }
@@ -195,21 +191,7 @@ a {
   cursor: pointer;
 }
 .side-icon-img:hover {
-  animation: bounce 0.7s linear infinite;
-}
-
-.cursor {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-top: 2px solid #63a4ff;
-  border-bottom: 2px solid #63a4ff;
-  border-right: 2px solid #ff4e00;
-  border-left: 2px solid #ff4e00;
-  border-radius: 50%;
-  z-index: 1;
-  animation: spin-backwards 1s linear infinite;
-  overflow: hidden;
+  animation: bounce 0.9s linear infinite;
 }
 
 .home-wrapper {
@@ -218,9 +200,6 @@ a {
   margin-left: 20%;
   height: 100%;
   max-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,7 +212,7 @@ a {
   transition: 0.4s;
 }
 .letter:hover:nth-child(odd) {
-  background: -webkit-linear-gradient(180deg, #63a4ff 44%, #83eaf1 66%);
+  background: -webkit-linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -242,7 +221,7 @@ a {
   font-size: 78px;
 }
 .letter:hover:nth-child(even) {
-  background: -webkit-linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  background: -webkit-linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -260,6 +239,151 @@ a {
 .back-video {
   height: 100%;
   opacity: 0.8;
+}
+
+.about-wrapper {
+  width: 80%;
+  margin-left: 20%;
+  height: 100vh;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: url("../../public/images/about_back.png");
+}
+
+.card-about-wrapper {
+  position: relative;
+  min-width: 50%;
+  min-height: 50%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.front-about, .back-about {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front-about {
+  border-radius: 15px;
+  padding: 2rem;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 28px;
+  color: white;
+  background-color: rgba(85, 85, 85, 0.7);
+}
+
+.back-about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 28px;
+  color: white;
+  background-color: rgba(103, 100, 100, 0.8);
+  border-radius: 15px;
+  padding: 2rem;
+  font-size: 20px;
+  transform: rotateY(180deg);
+}
+
+.card-about-wrapper:hover {
+  transform: rotateY(180deg);
+}
+
+.card-about-title {
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.highlighted-text {
+  background: -webkit-linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.age-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(103, 100, 100, 0.8);
+  padding: 1rem;
+  border-radius: 0px 0px 0px 15px;
+}
+
+.skill-wrapper {
+  width: 80%;
+  margin-left: 20%;
+  height: 100vh;
+  max-height: 100%;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.job-skill {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-title-box h1 {
+  background: -webkit-linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.skill-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 22px;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.point {
+  height: 15px;
+  width: 40px;
+  background: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+  transform: skew(-20deg);
+}
+
+.grey-point {
+  height: 15px;
+  width: 40px;
+  background: #9c9c9c;
+  transform: skew(-20deg);
 }
 
 .app-wrapper {

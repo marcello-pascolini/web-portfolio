@@ -1,0 +1,66 @@
+.about-wrapper{
+    width: 80%;
+    margin-left: 20%;
+    height: 100vh;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-image: url('../../public/images/about_back.png');
+}
+.card-about-wrapper{
+    position: relative;
+    min-width: 50%;
+    min-height: 50%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.front-about, .back-about{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.front-about{
+    border-radius: 15px;
+    padding: 2rem;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 28px;
+    color: white;
+    background-color: rgba(85, 85, 85, 0.7);
+} 
+.back-about{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 28px;
+    color: white;
+    background-color: rgba(103, 100, 100, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    font-size: 20px;
+    transform: rotateY(180deg);
+}
+.card-about-wrapper:hover  {
+    transform: rotateY(180deg);
+}
+.card-about-title{
+    text-transform: uppercase;
+        @include gradientDarkText(24px, 700)
+}
+.highlighted-text{
+    @include gradientText(20px, 400)
+}
+.age-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(103, 100, 100, 0.8);
+    padding: 1rem;
+    border-radius: 0px 0px 0px 15px;
+}

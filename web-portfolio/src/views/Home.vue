@@ -2,7 +2,7 @@
 <template>
     <div class="home-wrapper">
         <video autoplay muted loop class="back-video">
-            <source src="/images/home-back.mp4" type="video/mp4">
+            <source src="/videos/home-back.mp4" type="video/mp4">
         </video>
         <div class="home-text-box">
             <span 
